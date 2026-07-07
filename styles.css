@@ -1,0 +1,1107 @@
+/* ============================================
+   TRÀ CÀ GAI LEO RAU MÁ MỘC LÀNH
+   Landing Page - Clean CSS Rebuild
+   ============================================ */
+
+/* === GOOGLE FONTS === */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Dancing+Script:wght@400..700&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* === RESET === */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #333;
+  background-color: #f5f5f5;
+  padding-bottom: 70px; /* room for sticky bar */
+  -webkit-font-smoothing: antialiased;
+}
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+button { cursor: pointer; border: none; font: inherit; }
+
+/* === PAGE WRAPPER (max 420px centered) === */
+.page-wrapper {
+  max-width: 420px;
+  margin: 0 auto;
+  background: #fff;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+
+/* === CSS VARIABLES === */
+:root {
+  --orange:  #e67e22;
+  --orange-light: #ffba7c;
+  --red:     #f44336;
+  --white:   #ffffff;
+  --dark:    #333;
+  --gray:    #777;
+  --light-gray: #f5f5f5;
+  --border:  #e5e7eb;
+}
+
+/* ============================================
+   SECTION 1: TOP BAR
+   ============================================ */
+.top-bar {
+  background: var(--orange);
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.top-bar a {
+  display: block;
+  border: 3px solid #fff;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 6px 10px;
+  line-height: 1.3;
+}
+
+/* ============================================
+   SECTION 2: HERO
+   ============================================ */
+.hero-section {
+  background: rgba(255,255,255,0.95);
+  padding-bottom: 16px;
+  position: relative;
+}
+
+/* Hero image full width */
+.hero-image-wrap {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  margin-top: 110px;
+}
+.hero-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Brand title floats above image */
+.hero-brand {
+  text-align: center;
+  padding: 12px 16px 0;
+  position: relative;
+  z-index: 2;
+}
+.hero-brand h1 {
+  font-family: 'EB Garamond', serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: #434141;
+  line-height: 1.2;
+}
+.hero-brand .divider {
+  width: 180px;
+  height: 2px;
+  background: #536077;
+  margin: 6px auto;
+}
+.hero-brand .cursive {
+  font-family: 'Dancing Script', cursive;
+  font-size: 34px;
+  font-weight: 900;
+  color: var(--orange);
+  line-height: 1.1;
+}
+
+/* CTA Button */
+.hero-cta {
+  margin: 16px auto;
+  display: flex;
+  justify-content: center;
+}
+.cta-btn {
+  background: var(--red);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 20px;
+  text-align: center;
+  animation: pulse 1s infinite;
+  cursor: pointer;
+  display: inline-block;
+}
+.cta-btn a { color: #fff; }
+
+/* Viewing count bar */
+.viewing-bar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 16px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.viewing-bar .count {
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+  animation: swing 1s infinite;
+  display: inline-block;
+  transform-origin: top center;
+}
+
+/* ============================================
+   SECTION 3: MEN GAN CAO (Problem)
+   ============================================ */
+.problem-section {
+  background: var(--orange-light);
+  padding: 20px 16px 28px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.problem-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+/* Liver GIF */
+.liver-gif {
+  width: 80%;
+  margin: 0 auto 16px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.liver-gif img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Symptom list */
+.symptom-heading {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.symptom-list {
+  padding-left: 4px;
+}
+.symptom-list li {
+  font-size: 15px;
+  line-height: 1.8;
+  padding-left: 20px;
+  position: relative;
+}
+.symptom-list li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  color: #333;
+  font-size: 10px;
+  top: 4px;
+}
+
+.warning-heading {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  margin: 18px 0 8px;
+  line-height: 1.3;
+}
+
+.danger-list {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+.danger-list li {
+  padding-left: 18px;
+  position: relative;
+}
+.danger-list li::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  color: #777;
+  font-size: 9px;
+  top: 5px;
+}
+
+.danger-subheading {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 12px 0 4px;
+}
+
+/* Video section */
+.video-wrapper {
+  width: 75%;
+  margin: 20px auto 0;
+  border: 3px ridge #8f8f8f;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.video-wrapper video {
+  width: 100%;
+  display: block;
+}
+.video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(0,0,0,0.4) url('https://content.pancake.vn/1.1/30/5a/c2/93/9ec72c8ce8898050035dddbb989c950bc1faabdc1fdcc11175dea467.svg') center/60% no-repeat;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ============================================
+   SECTION 4: TARGET AUDIENCE (4 Cards)
+   ============================================ */
+.target-section {
+  background: #fff;
+  padding: 16px 8px 20px;
+}
+
+.target-title-box {
+  background: var(--red);
+  border-radius: 50px;
+  margin: 0 4px 16px;
+  padding: 14px 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.symptom-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 0 4px;
+}
+
+.symptom-card {
+  background: var(--orange-light);
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 12px;
+  /* diamond/shield shape via clip-path approximation */
+  clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 82%, 50% 100%, 0% 82%, 0% 10%);
+}
+
+.symptom-card .card-img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  display: block;
+}
+
+.symptom-card .flash-badge {
+  position: absolute;
+  top: 88px;
+  left: 8px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #fff;
+  animation: flash 1s infinite;
+}
+.symptom-card .flash-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.symptom-card .card-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 10px 4px;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.symptom-card .card-list {
+  padding: 0 10px 4px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.symptom-card .card-list li {
+  padding-left: 14px;
+  position: relative;
+}
+.symptom-card .card-list li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  font-size: 8px;
+  top: 4px;
+  color: #444;
+}
+
+/* ============================================
+   SECTION 5: CONSULT FORM (mini)
+   ============================================ */
+.consult-section {
+  background: #fff;
+  padding: 20px 16px 24px;
+  position: relative;
+}
+
+.consult-product-img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 45%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.consult-form-box {
+  border: 3px solid var(--orange);
+  border-radius: 8px;
+  background: rgba(165,168,182,0.2);
+  padding: 16px;
+  width: 80%;
+}
+
+.consult-label {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--orange);
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  background: #fff;
+  color: #333;
+}
+.form-input::placeholder { color: #999; }
+
+.form-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  background: #fff;
+  color: #333;
+  appearance: none;
+}
+
+.consult-btn {
+  background: #1d9141;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 6px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  animation: pulse 1s infinite;
+  cursor: pointer;
+  border: none;
+}
+
+/* ============================================
+   SECTION 6: PRODUCT + ORDER FORM
+   ============================================ */
+.product-section {
+  background: #fff;
+  padding: 16px 10px 20px;
+}
+
+/* Gallery / slideshow */
+.gallery-container {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+  margin-bottom: 4px;
+  border-radius: 4px;
+}
+.gallery-slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.gallery-slide.active { opacity: 1; }
+
+.gallery-thumbs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 6px 0;
+  scrollbar-width: none;
+}
+.gallery-thumbs::-webkit-scrollbar { display: none; }
+.gallery-thumb {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.gallery-thumb.active { border-color: var(--orange); }
+
+.gallery-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.7);
+  border: none;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery-nav-btn.prev { left: 6px; }
+.gallery-nav-btn.next { right: 6px; }
+
+/* Stats bar */
+.stats-bar {
+  font-size: 13px;
+  color: #555;
+  padding: 6px 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.stats-bar .stock-flash {
+  font-size: 13px;
+  color: #555;
+}
+.stats-bar .stock-count {
+  color: #e67e22;
+  font-weight: bold;
+  animation: tada 1s 1;
+  display: inline-block;
+}
+
+/* Product description line */
+.product-tagline {
+  color: var(--orange);
+  font-size: 14px;
+  padding: 8px 4px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin: 6px 0;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Product name + price */
+.product-info {
+  padding: 10px 4px 8px;
+}
+.product-name {
+  color: var(--orange);
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+.product-price-original {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+  margin-bottom: 4px;
+}
+.product-price-current {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.product-price-current .price {
+  color: red;
+  font-size: 22px;
+  font-weight: bold;
+}
+.discount-badge {
+  background: var(--red);
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 3px 10px;
+  border-radius: 4px;
+  animation: flash 1s infinite;
+}
+
+/* Promo teaser */
+.promo-teaser {
+  background: #ffe8cc;
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+.promo-teaser .spin-text {
+  color: red;
+  font-size: 22px;
+  font-weight: 900;
+}
+.promo-note {
+  color: var(--orange);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* ORDER FORM */
+.order-form {
+  background: #fff;
+  padding: 0 4px;
+}
+.order-form .form-section-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.combo-options { margin-bottom: 12px; }
+.combo-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  transition: border-color 0.2s, background 0.2s;
+}
+.combo-option:has(input:checked) {
+  border-color: var(--orange);
+  background: #fff8f0;
+}
+.combo-option input[type="radio"] {
+  margin-top: 3px;
+  flex-shrink: 0;
+  accent-color: var(--orange);
+}
+.combo-option label {
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #333;
+}
+
+.submit-btn {
+  background: var(--red);
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 14px;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+  animation: pulse 1s infinite;
+  cursor: pointer;
+  border: none;
+  margin-top: 4px;
+  display: block;
+}
+
+/* ============================================
+   SECTION 7: INGREDIENTS + KIEMDINH
+   ============================================ */
+.ingredients-section {
+  background: #fff;
+  padding: 20px 0;
+}
+
+.ingredients-full-img {
+  width: 100%;
+  display: block;
+}
+
+/* ============================================
+   SECTION 8: USAGE GUIDE
+   ============================================ */
+.usage-section {
+  background: #f9f9f9;
+  padding: 20px 16px;
+}
+
+.usage-title-bar {
+  background: var(--orange);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.usage-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.usage-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+.step-number {
+  background: var(--orange);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.step-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+  padding-top: 4px;
+}
+
+/* Kiểm định image */
+.cert-image {
+  width: 100%;
+  display: block;
+  margin-top: 16px;
+  border-radius: 6px;
+}
+
+/* ============================================
+   SECTION 9: BENEFITS / CÔNG DỤNG
+   ============================================ */
+.benefits-section {
+  background: #fff;
+  padding: 20px 16px;
+}
+
+.benefits-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--orange);
+  line-height: 1.3;
+  text-align: center;
+  margin-bottom: 6px;
+}
+.benefits-subtitle {
+  font-size: 13px;
+  color: #777;
+  text-align: center;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.benefits-list {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #444;
+}
+.benefits-list li {
+  padding-left: 6px;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+.benefits-list li strong { color: var(--red); }
+
+/* ============================================
+   SECTION 10: LIỆU TRÌNH / DOSAGE
+   ============================================ */
+.dosage-section {
+  background: #fff;
+  padding: 0;
+}
+.dosage-full-img {
+  width: 100%;
+  display: block;
+  animation: tada 1s 1;
+}
+
+/* Dosage combos */
+.dosage-combos {
+  padding: 16px 12px 20px;
+}
+
+.dosage-combo-card {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+.dosage-combo-card:active { transform: scale(0.98); }
+.dosage-combo-img {
+  width: 100%;
+  display: block;
+}
+
+/* Order CTA */
+.order-cta-section {
+  padding: 12px 12px 16px;
+  background: #fff;
+}
+.order-cta-btn {
+  display: block;
+  background: var(--red);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 16px;
+  border-radius: 8px;
+  animation: pulse 1s infinite;
+  cursor: pointer;
+}
+
+/* ============================================
+   SECTION 11: FOOTER (Countdown)
+   ============================================ */
+.countdown-section {
+  background: #fff;
+  padding: 16px 12px;
+}
+
+.countdown-title {
+  color: var(--orange);
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.countdown-sub {
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+.countdown-discount {
+  font-size: 34px;
+  font-style: italic;
+  font-weight: 900;
+  color: var(--red);
+  line-height: 1;
+}
+.countdown-extra {
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 700;
+}
+.countdown-price-label {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
+}
+.countdown-price-val {
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 900;
+  color: var(--red);
+}
+.countdown-note {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+/* Timer wrapper */
+.timer-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 0;
+  font-size: 14px;
+  font-weight: 500;
+  flex-wrap: wrap;
+}
+.timer-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.timer-number-box {
+  background: var(--orange);
+  color: #fff;
+  font-size: 26px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 4px;
+  min-width: 52px;
+  text-align: center;
+  line-height: 1.2;
+}
+.timer-label {
+  font-size: 11px;
+  color: #666;
+  margin-top: 3px;
+}
+.timer-sep {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--orange);
+  padding-bottom: 12px;
+}
+
+/* Phone image badge (animated) */
+.phone-badge-img {
+  width: 100px;
+  animation: tada 1s infinite;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Footer CTA */
+.footer-info {
+  background: var(--orange);
+  color: #fff;
+  padding: 14px 16px;
+}
+.footer-info p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 4px;
+}
+.footer-info .divider-line {
+  border: 1.5px solid #fff;
+  margin: 10px 0;
+}
+.footer-info .italic-note {
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(255,255,255,0.85);
+}
+
+/* ============================================
+   FLOATING PHONE BUTTON
+   ============================================ */
+.phone-float {
+  position: fixed;
+  right: 16px;
+  bottom: 90px;
+  z-index: 1000;
+  width: 65px;
+  height: 65px;
+}
+.phone-float img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  animation: pulse 1s 3;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* ============================================
+   STICKY BOTTOM BAR
+   ============================================ */
+.sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+.sticky-bar-inner {
+  max-width: 420px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 52px;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.15);
+}
+.sticky-call {
+  background: #27ae60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  gap: 6px;
+  text-decoration: none;
+}
+.sticky-order {
+  background: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  animation: flash 3s infinite;
+}
+
+/* ============================================
+   SOCIAL PROOF NOTIFICATION
+   ============================================ */
+.notify-popup {
+  position: fixed;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 998;
+  max-width: 380px;
+  width: 90%;
+  background: #fff;
+  border: 1.5px solid rgba(76,175,80,0.8);
+  border-radius: 12px;
+  box-shadow: 4px 4px 9px rgba(139,195,74,0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+.notify-popup.show {
+  opacity: 1;
+  visibility: visible;
+}
+.notify-popup .noti-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.notify-popup .noti-info .noti-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+.notify-popup .noti-info .noti-content {
+  font-size: 13px;
+  color: #555;
+}
+.notify-popup .noti-info .noti-time {
+  font-size: 12px;
+  color: #999;
+}
+
+/* ============================================
+   KEYFRAME ANIMATIONS (từ animatev4.css)
+   ============================================ */
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+@keyframes flash {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75%      { opacity: 0.4; }
+}
+@keyframes swing {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(15deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-15deg); }
+  100% { transform: rotate(0deg); }
+}
+@keyframes tada {
+  0%    { transform: scale(1); }
+  10%   { transform: scale(0.9) rotate(-3deg); }
+  20%   { transform: scale(0.9) rotate(-3deg); }
+  30%   { transform: scale(1.1) rotate(3deg); }
+  40%   { transform: scale(1.1) rotate(-3deg); }
+  50%   { transform: scale(1.1) rotate(3deg); }
+  60%   { transform: scale(1.1) rotate(-3deg); }
+  70%   { transform: scale(1.1) rotate(3deg); }
+  80%   { transform: scale(1.1) rotate(-3deg); }
+  90%   { transform: scale(1.1) rotate(3deg); }
+  100%  { transform: scale(1) rotate(0deg); }
+}
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes backInLeft {
+  0%   { transform: translateX(-2000px) scale(0.7); opacity: 0.7; }
+  80%  { transform: translateX(0px) scale(0.7); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* === Utility === */
+.animate-pulse { animation: pulse 1s infinite; }
+.animate-flash { animation: flash 1s infinite; }
+.animate-swing { animation: swing 1s infinite; transform-origin: top center; }
+.animate-tada  { animation: tada 1s infinite; }
+.animate-fadein-left { animation: fadeInLeft 1s 1; }
+.animate-backin-left { animation: backInLeft 1s 1; }
