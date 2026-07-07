@@ -336,10 +336,9 @@ function initFomoToasts() {
     "Đà Nẵng", "TP. Hồ Chí Minh", "Bình Dương", "Nghệ An", "Thái Bình"
   ];
   const combos = [
-    "Combo 3 Hộp + Tặng Cốc Pha Trà",
-    "Combo 2 Hộp (Dùng thử 1 tháng)",
-    "Combo 4 Hộp (Tặng thêm 2 Hộp)",
-    "Combo 5 Hộp (Tặng thêm 3 Hộp)"
+    "Combo Mua 3 Tặng 3 + Tặng Cốc",
+    "Combo Mua 2 Tặng 1",
+    "1 Hộp Trà Cà Gai Leo"
   ];
   const minutes = [1, 2, 3, 4, 5, 6, 10];
 
@@ -401,4 +400,62 @@ function initGiftProgress() {
     tickDown();
     setTimeout(run, Math.random() * 40000 + 25000);
   }, Math.random() * 40000 + 25000);
+}
+
+// Product image slider functionality
+const slider = document.querySelector(".visual-product-slider");
+if (slider) {
+  const slides = slider.querySelectorAll(".slide-item");
+  const dots = slider.querySelectorAll(".dot");
+  const prevBtn = slider.querySelector(".prev-btn");
+  const nextBtn = slider.querySelector(".next-btn");
+  let currentIndex = 0;
+  let autoSlideInterval;
+
+  function showSlide(index) {
+    slides[currentIndex].classList.remove("active");
+    dots[currentIndex].classList.remove("active");
+    
+    currentIndex = (index + slides.length) % slides.length;
+    
+    slides[currentIndex].classList.add("active");
+    dots[currentIndex].classList.add("active");
+  }
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentIndex - 1);
+  }
+
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener("click", () => {
+      prevSlide();
+      resetAutoSlide();
+    });
+    nextBtn.addEventListener("click", () => {
+      nextSlide();
+      resetAutoSlide();
+    });
+  }
+
+  dots.forEach((dot, idx) => {
+    dot.addEventListener("click", () => {
+      showSlide(idx);
+      resetAutoSlide();
+    });
+  });
+
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 3500);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+  }
+
+  startAutoSlide();
 }

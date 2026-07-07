@@ -27,24 +27,25 @@
 <body>
 
   <!-- 1. Top Bar & Header -->
-  <div class="top-bar">
-    <div class="container text-center">
-      <p>🔥 ƯU ĐÃI HÔM NAY - GIẢM ĐẾN 45% + MIỄN PHÍ GIAO HÀNG TOÀN QUỐC!</p>
-    </div>
-  </div>
-
   <header class="site-header">
     <div class="container header-flex">
       <div class="logo">
-        <img src="logo-tra-moc-lanh.png" alt="Logo Trà Mộc Lành" class="logo-image">
-        <span class="logo-text">MỘC LÀNH</span>
+        <img src="logo-tra-moc-lanh.png" alt="Logo Trà Mộc Lành" class="header-logo-img">
       </div>
-      <div class="slogan-badge">
-        <span>Bảo Vệ Lá Gan Luôn Khỏe</span>
-      </div>
-      <a href="#dat-hang" class="btn btn-primary btn-sm header-cta" id="header-cta-btn">MUA NGAY</a>
+      <a href="#dat-hang" class="header-promo-btn" id="header-cta-btn">Nhận Khuyến Mãi</a>
     </div>
   </header>
+
+  <!-- Viewing Proof -->
+  <div class="viewing-proof">
+    <div class="viewing-proof-flex">
+      <svg class="user-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#e74c3c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+        <circle cx="12" cy="7" r="4"></circle>
+      </svg>
+      <span>Có <strong class="text-danger">103</strong> đang xem sản phẩm này cùng bạn</span>
+    </div>
+  </div>
 
   <main>
     <!-- 2. Hero Section (Đẩy ảnh lên cao + Nút đỏ bên dưới) -->
@@ -52,39 +53,128 @@
       <div class="container hero-grid">
         <!-- Title Header -->
         <div class="hero-header text-center">
-          <h1 class="hero-title">Trà Thảo Mộc</h1>
-          <div class="hero-product-name">Cà Gai Leo Rau Má</div>
-          <div class="hero-brand-subtitle">Mộc Lành tự nhiên 100%</div>
+          <h1 class="hero-main-title">TRÀ CÀ GAI LEO RAU MÁ MỘC LÀNH</h1>
+          <div class="hero-brand-subtitle-cursive">
+            <span class="subtitle-line"></span>
+            <span class="cursive-text">Mát Gan Thải Độc</span>
+            <span class="subtitle-line"></span>
+          </div>
+          <div class="highlight-badge-wrapper">
+            <span class="highlight-badge">Hạ Men Gan</span>
+          </div>
         </div>
         
-        <!-- Hero Media (Ảnh sản phẩm thực tế) -->
+        <!-- Hero Media (Ảnh sản phẩm thực tế với overlays) -->
         <div class="hero-media">
           <div class="media-wrapper">
-            <img src="hero.jpg" alt="Trà Cà Gai Leo Rau Má Mộc Lành" class="hero-img">
-            <div class="floating-badge">
-              <span class="badge-title">ƯU ĐÃI KHỦNG</span>
-              <span class="badge-price">-45%</span>
+            <img src="hero.jpg?v=3" alt="Trà Cà Gai Leo Rau Má Mộc Lành" class="hero-img">
+            
+            <!-- Overlay Title on image -->
+            <div class="media-overlay-title text-center">
+              <h2>Mát Gan - Giải Độc</h2>
+              <h3>Hạ Men Gan Hiệu Quả</h3>
             </div>
+            
+            <!-- Floating badges on left side -->
+            <div class="media-badges-list">
+              <div class="media-badge-item">
+                <img src="ingredient-cagaileo.png" alt="Cà Gai Leo" class="media-badge-img">
+                <span class="media-badge-text">Hỗ trợ hạ men gan - mát gan</span>
+              </div>
+              <div class="media-badge-item">
+                <img src="ingredient-rauma.png" alt="Rau Má" class="media-badge-img">
+                <span class="media-badge-text">Hết nóng trong - mụn nhọt</span>
+              </div>
+              <div class="media-badge-item">
+                <img src="benefit-ngu-sau.png" alt="Ngủ sâu" class="media-badge-img">
+                <span class="media-badge-text">Thanh lọc, ngủ ngon giấc</span>
+              </div>
+            </div>
+            
+            <!-- Phone Badge overlay (right bottom side) -->
+            <a href="tel:0931899711" class="media-phone-badge">
+              <span class="phone-icon-circle">📞</span>
+              <span class="phone-number-text">093 189 97 11</span>
+            </a>
           </div>
         </div>
 
         <!-- Description & CTA Button underneath the image -->
         <div class="hero-cta-box text-center">
-          <p class="hero-lead">Giải pháp tự nhiên giúp thanh lọc thải độc, hạ men gan, trị mụn nội tiết và phục hồi chức năng gan từ thảo mộc thiên nhiên 100%.</p>
-          
-          <div class="social-proof-mini">
-            <div class="avatars">
-              <span class="avatar">👤</span>
-              <span class="avatar">👤</span>
-              <span class="avatar">👤</span>
+          <div class="hero-benefits-box">
+            <div class="promo-badge text-center">ƯU ĐÃI Tốt nhất cho bạn</div>
+            <div class="benefits-content">
+              <div class="benefits-logo">
+                <img src="tcgl%20nen%20trang.png" alt="Trà Cà Gai Leo Rau Má Mộc Lành">
+              </div>
+              <ul class="benefits-list">
+                <li>👍 1 hộp 30 túi lọc trà</li>
+                <li>👍 Không chất bảo quản</li>
+                <li>👍 Không phẩm màu</li>
+                <li>👍 Không hương liệu</li>
+                <li>👍 Hạn sử dụng 2 năm</li>
+              </ul>
             </div>
-            <div class="proof-text">
-              Có <strong class="text-danger">168</strong> người đang xem sản phẩm này
+            <!-- Chèn thêm giấy chứng nhận ngay dưới -->
+            <div class="benefits-cert-wrapper" style="margin-top: 15px; border-top: 1px dashed #eaeaea; padding-top: 12px; text-align: center;">
+              <p style="font-size: 0.8rem; font-weight: 700; color: #555555; margin-bottom: 8px;">★ Giấy kiểm định chất lượng sản phẩm ★</p>
+              <a href="kiemdinh.jpg" target="_blank" style="display: inline-block;">
+                <img src="kiemdinh.jpg" alt="Giấy kiểm định chất lượng" style="width: 100%; max-width: 280px; height: auto; border: 1px solid #eaeaea; border-radius: 4px; box-shadow: var(--shadow-sm); transition: var(--transition-fast);" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+              </a>
             </div>
           </div>
           
-          <div class="hero-cta-group">
+          <div class="hero-cta-group" style="margin-top: 15px;">
             <a href="#dat-hang" class="btn btn-red btn-lg btn-block pulse" id="hero-order-btn">ĐẶT MUA NGAY</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Pricing Visual Grid (Liệu trình sử dụng) -->
+    <section class="pricing-section" id="lieu-trinh">
+      <div class="container">
+        <div class="pricing-concept-wrapper">
+          <div class="gift-box-header text-center">
+            <span class="gift-icon-top">🎁</span>
+            <h2 class="discount-title">GIẢM GIÁ CHO <span class="highlight-red">100 KHÁCH HÀNG</span><br>ĐẶT MUA TRONG HÔM NAY</h2>
+            <img src="https://img.icons8.com/color/96/000000/gift.png" alt="Gift Box" class="gift-box-img-floating animate-bounce">
+          </div>
+
+          <h3 class="offer-title text-center">ƯU ĐÃI CHỈ TRONG</h3>
+          <div class="hours-badge-container">
+            <span class="hours-badge">24 GIỜ</span>
+          </div>
+
+          <div class="combo-prices-list text-center">
+            <p class="price-single-box"><i>Giá chỉ <strong>135.000đ/1 hộp</strong></i></p>
+            <p class="combo-item-row"><span class="emoji-icon">🏆</span> <strong>2 hộp tặng 1 hộp</strong> giá <strong>270.000đ</strong></p>
+            <p class="combo-item-row"><span class="emoji-icon">✨</span> <strong>Mua 3 hộp tặng 3</strong> giá <strong>405.000đ</strong></p>
+            <p class="shipping-note text-center">miễn phí vận chuyển toàn quốc khi mua từ 2 hộp trở lên</p>
+          </div>
+
+          <!-- Dark blue gift card -->
+          <div class="gift-reward-card">
+            <h4 class="reward-title text-center">20 SUẤT BỘ QUÀ TẶNG</h4>
+            <p class="reward-subtitle text-center">Chỉ trong hôm nay khi mua COMBO 3</p>
+            
+            <div class="reward-flex">
+              <div class="reward-img-circle-wrapper">
+                <img src="glass-cup-gift.png" alt="Cốc thủy tinh cao cấp 450ml" class="reward-img-circle">
+              </div>
+              <div class="reward-badge-pill-border">
+                <div class="reward-badge-pill-bg">
+                  <span>1 CỐC THỦY TINH CAO CẤP 450ML</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pricing select buttons -->
+          <div class="pricing-cta-group" style="margin-top: 25px; display: flex; flex-direction: column; gap: 10px; max-width: 320px; margin-left: auto; margin-right: auto;">
+            <button class="btn btn-accent select-combo-btn" data-combo="3_hop" style="font-size: 1.05rem; padding: 12px;" id="btn-select-3-hop-new">ĐẶT MUA COMBO 3 TẶNG 3</button>
+            <button class="btn btn-red select-combo-btn" data-combo="2_hop" style="font-size: 0.95rem; padding: 10px;" id="btn-select-2-hop-new">ĐẶT MUA COMBO 2 TẶNG 1</button>
+            <button class="btn btn-secondary select-combo-btn" data-combo="1_hop" style="font-size: 0.85rem; padding: 8px;" id="btn-select-1-hop-new">ĐẶT MUA 1 HỘP</button>
           </div>
         </div>
       </div>
@@ -93,10 +183,10 @@
     <!-- 4. Target Audience Section -->
     <section class="target-section">
       <div class="container">
-        <div class="section-title text-center">
-          <h2>DÀNH CHO ANH CHỊ ĐANG GẶP CÁC VẤN ĐỀ</h2>
-          <p class="section-subtitle">Hãy bảo vệ sức khỏe lá gan ngay hôm nay</p>
-        </div>
+          <div class="section-title text-center">
+            <h2>DÀNH CHO 90% ANH CHỊ ĐANG GẶP CÁC VẤN ĐỀ VỀ GAN</h2>
+            <p class="section-subtitle">Dấu hiệu tế bào gan đang bị tổn thương nghiêm trọng</p>
+          </div>
 
         <div class="audience-grid">
           <!-- Mụn nội tiết -->
@@ -171,37 +261,26 @@
         </div>
 
         <div class="pain-desc-card">
-          <p><strong>Men gan</strong> là những chất xúc tác (còn gọi & enzymes) do tế bào gan sản xuất ra ở nội bào và được giải phóng nhiều hơn bình thường vào tuần hoàn máu khi tế bào gan bị tổn thương. Men gan là protein giúp tăng tốc các phản ứng hóa học trong cơ thể. Những phản ứng hóa học này bao gồm sản xuất mật và các chất giúp đông máu, phá vỡ thức ăn và độc tố, và chống nhiễm trùng.</p>
-          <p><strong>Men gan cao</strong> là dấu hiệu cho thấy các tế bào gan đang bị tổn thương, bao gồm tình trạng viêm và hoại tử gan. Khi các tế bào gan bị phá huỷ, một số enzyme (còn gọi là men gan) được giải phóng vào máu. Nếu tình trạng men gan cao kéo dài và không được điều trị kịp thời sẽ dẫn đến một số biến chứng nguy hiểm như xơ gan, thậm chí ung thư gan,…</p>
+          <p><strong>Men gan</strong> là enzyme nằm trong tế bào gan, đóng vai trò xúc tác giúp thanh lọc độc tố, sản xuất mật và hỗ trợ tiêu hóa. Khi tế bào gan bị tổn thương hoặc hủy hoại, men gan sẽ bị phóng thích vào máu, dẫn đến tình trạng <strong>men gan cao</strong>.</p>
+          <p>Nếu không được phát hiện và điều trị kịp thời, men gan cao kéo dài sẽ hủy hoại tế bào gan hàng loạt, dẫn đến xơ gan, suy gan và thậm chí là ung thư gan.</p>
         </div>
 
         <!-- GIF minh họa lá gan bị tổn thương -->
         <div class="liver-gif-container">
-          <img src="gan-ton-thuong.gif" alt="Minh họa lá gan bị tổn thương do men gan cao" class="liver-gif">
+          <img src="gan-ton-thuong.png" alt="Minh họa lá gan bị tổn thương do men gan cao" class="liver-gif">
         </div>
-
-        <h3 class="subsection-title">BIỂU HIỆN CỦA MEN GAN CAO</h3>
-        <ul class="symptoms-list">
-          <li>Men gan cao gây mệt mỏi uể oải cho cơ thể</li>
-          <li>Men gan cao gây chán ăn, buồn nôn, và khó tiêu</li>
-          <li>Đau vùng bụng trên bên phải, nơi gan nằm, có thể là dấu hiệu của men gan cao</li>
-          <li>Vàng da và mắt: Biểu hiện rõ rệt của tổn thương ở gan. Vàng da, vàng mắt xảy ra khi lượng bilirubin trong máu tăng cao.</li>
-          <li>Phân có màu vàng nhạt.</li>
-          <li>Nước tiểu sẫm màu: Do sự tích tụ của bilirubin trong máu.</li>
-        </ul>
 
         <h3 class="subsection-title margin-top">MEN GAN CAO CẢNH BÁO GÌ?</h3>
         <div class="pain-desc-card warning">
-          <p>Việc tăng nồng độ men gan trong máu thường là dấu hiệu cảnh báo về các vấn đề sức khỏe của gan. Một số hậu quả nghiêm trọng do tình trạng men gan cao kéo dài bao gồm:</p>
-          <p>Các biến chứng như xơ gan, ung thư gan... rất dễ xảy ra nếu tình trạng tăng men gan kéo dài không được điều trị. Tăng men gan là dấu hiệu cảnh báo các vấn đề về gan như viêm gan, ung thư gan và các bệnh lý gan khác. Nguy hiểm hơn, nếu nguyên nhân tăng men gan là do nhiễm độc, người bệnh có thể đối mặt với nguy cơ suy gan cấp, hôn mê gan và thậm chí tử vong.</p>
+          <p>Men gan cao là hồi chuông báo động đỏ về sức khỏe của gan. Khi tế bào gan bị tổn thương liên tục, người bệnh rất dễ đối mặt với nguy cơ biến chứng nguy hiểm.</p>
         </div>
 
-        <h4 class="list-title">Người bị MEN GAN CAO kéo dài dễ mắc phải:</h4>
+        <h4 class="list-title" style="color: #ff0000; font-weight: 800;">Người bị MEN GAN CAO kéo dài dễ mắc phải:</h4>
         <ul class="consequences-list">
-          <li>Viêm gan</li>
-          <li>Xơ gan</li>
-          <li>Ung thư gan</li>
-          <li>Bệnh lý tăng huyết áp, đái tháo đường.</li>
+          <li>❌ <strong>Viêm gan cấp và mãn tính:</strong> Hủy hoại cấu trúc gan âm thầm.</li>
+          <li>❌ <strong>Xơ gan, suy gan:</strong> Gan mất dần chức năng lọc thải độc tố, gây suy kiệt cơ thể.</li>
+          <li>❌ <strong>Ung thư gan:</strong> Biến chứng nguy hiểm nhất đe dọa trực tiếp tính mạng.</li>
+          <li>❌ <strong>Bệnh lý chuyển hóa:</strong> Dễ dẫn đến đái tháo đường, tăng huyết áp.</li>
         </ul>
       </div>
     </section>
@@ -209,7 +288,7 @@
     <!-- Nối tiếp: Bí mật thay đổi sức khỏe -->
     <div class="transition-banner text-center">
       <div class="container">
-        <h3 class="transition-text">Bí mật thay đổi sức khỏe với <br><strong>TRÀ CÀ GAI LEO RAU MÁ</strong></h3>
+        <h3 class="transition-text"><span style="color: #ff4f4f; font-weight: 800; text-shadow: 0 1px 2px rgba(0,0,0,0.4);">Bí mật thay đổi sức khỏe với</span> <br><strong>TRÀ CÀ GAI LEO RAU MÁ</strong></h3>
       </div>
     </div>
 
@@ -359,9 +438,32 @@
           <p>Nhanh tay lên. Chỉ còn <span class="counter-number">12</span> sản phẩm giảm giá</p>
         </div>
 
-        <!-- Hình ảnh Demo 2: Để mắt được nghỉ và tạo cảm quan sản phẩm đẹp -->
-        <div class="visual-product-shot">
-          <img src="z7956424963286_c1033d82b73e15638e9a2cbafb0e066a.jpg" alt="Trà cà gai leo rau má Mộc Lành">
+        <!-- Slideshow ảnh các sản phẩm thực tế -->
+        <div class="visual-product-slider">
+          <div class="slider-wrapper">
+            <div class="slide-item active">
+              <img src="z7956424963285_3f9486d76d1888affd55665609b8ca76.jpg" alt="Trà cà gai leo rau má Mộc Lành - 1">
+            </div>
+            <div class="slide-item">
+              <img src="z7956424963243_bfb4f484910ba0966c43c66b9f2b1677.jpg" alt="Trà cà gai leo rau má Mộc Lành - 2">
+            </div>
+            <div class="slide-item">
+              <img src="z7956424647657_57395fd44955af3928e4a3bb01b866b7.jpg" alt="Trà cà gai leo rau má Mộc Lành - 3">
+            </div>
+            <div class="slide-item">
+              <img src="z7956424647667_5b9592ad6984ca1e8940f1769511c1ec.jpg" alt="Trà cà gai leo rau má Mộc Lành - 4">
+            </div>
+          </div>
+          <!-- Navigation buttons -->
+          <button class="slider-btn prev-btn" aria-label="Previous image">❮</button>
+          <button class="slider-btn next-btn" aria-label="Next image">❯</button>
+          <!-- Indicators dots -->
+          <div class="slider-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+          </div>
         </div>
 
         <div class="discount-intro-card text-center">
@@ -412,29 +514,19 @@
               <label class="form-section-label">Lựa chọn gói Combo đặt mua:</label>
               <div class="combo-radio-group">
                 <label class="radio-option">
-                  <input type="radio" name="combo" value="2 hộp 199k + free ship" id="radio-2-hop">
+                  <input type="radio" name="combo" value="3 hộp tặng 3 giá 405k + free ship + tặng cốc" id="radio-3-hop" checked>
                   <span class="radio-custom"></span>
-                  <span class="radio-label-text"><strong>2 hộp</strong> giá <strong>199k</strong> + miễn ship - Dùng thử 1 tháng</span>
+                  <span class="radio-label-text"><strong>Mua 3 Hộp Tặng 3 Hộp (Nhận 6 Hộp)</strong>: <strong>405.000đ</strong> + miễn ship + <strong>TẶNG CỐC CAO CẤP</strong></span>
                 </label>
                 <label class="radio-option">
-                  <input type="radio" name="combo" value="3 hộp 295k + free ship + tặng cốc" id="radio-3-hop" checked>
+                  <input type="radio" name="combo" value="2 hộp tặng 1 giá 270k + free ship" id="radio-2-hop">
                   <span class="radio-custom"></span>
-                  <span class="radio-label-text"><strong>3 hộp</strong> giá <strong>295k</strong> + miễn ship + tặng kèm 1 Cốc pha trà 450ML - Dùng 1,5 tháng. (Được mua nhiều)</span>
+                  <span class="radio-label-text"><strong>Mua 2 Hộp Tặng 1 Hộp (Nhận 3 Hộp)</strong>: <strong>270.000đ</strong> + miễn ship</span>
                 </label>
                 <label class="radio-option">
-                  <input type="radio" name="combo" value="4 hộp tặng 2 giá 395k + free ship" id="radio-4-hop">
+                  <input type="radio" name="combo" value="1 hộp 135k + 30k ship" id="radio-1-hop">
                   <span class="radio-custom"></span>
-                  <span class="radio-label-text"><strong>4 hộp</strong> giá <strong>395k</strong> tặng 2 hộp + miễn ship - Dùng 3 tháng. (Hiệu quả cao nhất)</span>
-                </label>
-                <label class="radio-option">
-                  <input type="radio" name="combo" value="5 hộp tặng 3 giá 450k + free ship" id="radio-5-hop">
-                  <span class="radio-custom"></span>
-                  <span class="radio-label-text"><strong>5 hộp</strong> giá <strong>450k</strong> tặng 3 hộp + miễn ship - Dùng nhiều người. (Tiết kiệm nhất)</span>
-                </label>
-                <label class="radio-option">
-                  <input type="radio" name="combo" value="1 hộp 109k + 30k ship" id="radio-1-hop">
-                  <span class="radio-custom"></span>
-                  <span class="radio-label-text">Mua <strong>1 hộp</strong> 109k (30 túi lọc) + ship 30k - Tổng <strong>139k</strong></span>
+                  <span class="radio-label-text">Mua <strong>1 hộp</strong>: <strong>135.000đ</strong> + ship 30k (Tổng 165.000đ)</span>
                 </label>
               </div>
             </div>
@@ -500,95 +592,6 @@
         <div class="short-brand-detail text-center">
           <h3 class="title-brand">TRÀ CÀ GAI LEO RAU MÁ</h3>
           <p class="desc-brand">Đáp ứng tốt với các trường hợp tăng cường và phục hồi chức năng gan</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 10. Pricing Visual Grid (Liệu trình sử dụng) -->
-    <section class="pricing-section">
-      <div class="container">
-        <div class="section-title text-center">
-          <h2>LIỆU TRÌNH SỬ DỤNG TRÀ CÀ GAI LEO RAU MÁ HIỆU QUẢ NHẤT</h2>
-          <h3 class="pricing-main-title">ƯU ĐÃI HẤP DẪN</h3>
-          
-          <div class="countdown-container">
-            <p>⏰ CHƯƠNG TRÌNH SẼ KẾT THÚC TRONG</p>
-            <div class="timer" id="countdown-timer">
-              <div class="timer-unit"><span id="days">00</span><span>Ngày</span></div>
-              <div class="timer-unit"><span id="hours">00</span><span>Giờ</span></div>
-              <div class="timer-unit"><span id="minutes">00</span><span>Phút</span></div>
-              <div class="timer-unit"><span id="seconds">00</span><span>Giây</span></div>
-            </div>
-          </div>
-
-          <!-- Tiến trình quà tặng kích thích mua hàng -->
-          <div class="gift-progress-box">
-            <div class="gift-progress-header">
-              <span>🎁 Chỉ còn <strong class="gift-count">7</strong> cốc thủy tinh quà tặng miễn phí!</span>
-              <span class="gift-percentage">70%</span>
-            </div>
-            <div class="gift-progress-bar">
-              <div class="gift-progress-fill" style="width: 70%;"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="pricing-grid">
-          <!-- 1 Hộp -->
-          <div class="price-card">
-            <div class="card-header">
-              <h3>Mua 1 HỘP</h3>
-              <p class="pkg-shipping">+ phí ship 30k</p>
-            </div>
-            <div class="card-price">
-              <span class="price-current">109.000đ</span>
-            </div>
-            <p class="pkg-desc">1 hộp 30 túi lọc dùng được 10 ngày</p>
-            <button class="btn btn-primary select-combo-btn" data-combo="1_hop" id="btn-select-1-hop">ĐẶT HÀNG NGAY</button>
-          </div>
-
-          <!-- 2 Hộp -->
-          <div class="price-card popular">
-            <div class="popular-ribbon">🔥 FREE SHIP</div>
-            <div class="card-header">
-              <h3>Mua 2 HỘP</h3>
-              <p class="pkg-shipping text-success">Miễn phí giao hàng</p>
-            </div>
-            <div class="card-price">
-              <span class="price-old">398.000đ</span>
-              <span class="price-current">199.000đ</span>
-            </div>
-            <p class="pkg-desc">Tổng 2 hộp 60 túi lọc dùng được 1 tháng</p>
-            <button class="btn btn-accent select-combo-btn" data-combo="2_hop" id="btn-select-2-hop">ĐẶT HÀNG 2 HỘP NGAY</button>
-          </div>
-
-          <!-- 3 Hộp -->
-          <div class="price-card">
-            <div class="card-header">
-              <h3>Mua 3 HỘP</h3>
-              <p class="pkg-shipping text-success">Miễn phí giao hàng + Quà tặng</p>
-            </div>
-            <div class="card-price">
-              <span class="price-old">597.000đ</span>
-              <span class="price-current">295.000đ</span>
-            </div>
-            <p class="pkg-desc">Tổng 3 hộp 90 túi lọc dùng được khoảng 1,5 tháng<br><strong>tặng kèm Cốc pha trà 450ml thuỷ tinh cao cấp</strong></p>
-            <button class="btn btn-primary select-combo-btn" data-combo="3_hop" id="btn-select-3-hop">ĐẶT HÀNG NHẬN QUÀ</button>
-          </div>
-
-          <!-- 4 Hộp -->
-          <div class="price-card">
-            <div class="card-header">
-              <h3>Mua 4 HỘP</h3>
-              <p class="pkg-shipping text-success">Miễn phí giao hàng + Tặng thêm</p>
-            </div>
-            <div class="card-price">
-              <span class="price-old">796.000đ</span>
-              <span class="price-current">395.000đ</span>
-            </div>
-            <p class="pkg-desc">Tổng 6 hộp (Tặng thêm 2 HỘP) dùng được 3 tháng</p>
-            <button class="btn btn-primary select-combo-btn" data-combo="4_hop_tang_2" id="btn-select-4-hop">ĐẶT HÀNG 4 HỘP NGAY</button>
-          </div>
         </div>
       </div>
     </section>
