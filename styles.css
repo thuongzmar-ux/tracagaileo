@@ -891,61 +891,59 @@ button { cursor: pointer; border: none; font: inherit; }
   margin-bottom: 10px;
 }
 
-/* Individual review cards */
-.review-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.review-card {
-  background: #fff8f0;
-  border: 1.5px solid #f0d0a0;
-  border-radius: 10px;
-  padding: 12px 14px;
-  position: relative;
-}
-
-.review-card-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
-}
-
-.review-avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-  border: 2px solid var(--orange);
-}
-
-.review-name {
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
-  line-height: 1.3;
-}
-
-.review-stars {
-  color: #f5a623;
-  font-size: 13px;
-  letter-spacing: 1px;
-}
-
-.review-text {
-  font-size: 13px;
-  line-height: 1.7;
-  color: #444;
-}
-
-.review-photo {
-  width: 100%;
+/* Facebook-style comments */
+.fb-comments {
+  background: #fff;
+  padding: 16px 14px;
   border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+.fb-comment {
+  display: flex;
+  margin-bottom: 24px;
+  align-items: flex-start;
+}
+.fb-avatar {
+  width: 46px;
+  height: 46px;
+  object-fit: cover;
+  margin-right: 10px;
+  flex-shrink: 0;
+  border-radius: 2px; /* Square avatars like the screenshot */
+}
+.fb-body {
+  flex-grow: 1;
+}
+.fb-name {
+  font-size: 15px;
+  color: #000;
+  font-weight: 500;
+}
+.fb-text {
+  font-size: 14.5px;
+  color: #000;
+  line-height: 1.45;
+  margin-top: 3px;
+}
+.fb-actions {
+  font-size: 13px;
+  color: #45b6fe;
   margin-top: 8px;
-  display: block;
+  display: flex;
+  gap: 16px;
+}
+.fb-actions span { cursor: pointer; }
+.fb-actions span:hover { text-decoration: underline; }
+.fb-actions .fb-time { color: #5bc0de; }
+
+.fb-reply {
+  display: flex;
+  margin-top: 14px;
+  align-items: flex-start;
+}
+.fb-reply .fb-avatar {
+  width: 40px;
+  height: 40px;
 }
 
 /* ============================================
