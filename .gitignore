@@ -5,3 +5,6 @@ node_modules/
 .agents/
 *.log
 .vercel
+download.gif
+compress.py
+
