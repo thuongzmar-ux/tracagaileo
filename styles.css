@@ -676,30 +676,16 @@ button { cursor: pointer; border: none; font: inherit; }
   100% { transform: translateY(6px); }
 }
 
-/* ORDER FORM (Brown/Ochre Box style) */
+/* ORDER FORM */
 .order-form {
-  background: #855b14;
-  padding: 20px 16px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(133, 91, 20, 0.25);
-  margin-bottom: 20px;
-}
-.form-title-white {
-  color: #fff;
-  font-size: 15px;
-  font-weight: 800;
-  text-align: center;
-  margin: 0 0 18px;
-  line-height: 1.4;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  background: #fff;
+  padding: 0 4px;
 }
 .order-form .form-section-label {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
-  color: #fff;
-  margin-top: 14px;
-  margin-bottom: 8px;
+  color: #555;
+  margin-bottom: 6px;
 }
 
 .combo-options { margin-bottom: 12px; }
@@ -1329,12 +1315,5 @@ button { cursor: pointer; border: none; font: inherit; }
   .gift-badge-red {
     font-size: 10px;
     padding: 4px 10px;
-  }
-  .form-title-white {
-    font-size: 13px;
-    margin-bottom: 12px;
-  }
-  .order-form {
-    padding: 16px 12px;
   }
 }
