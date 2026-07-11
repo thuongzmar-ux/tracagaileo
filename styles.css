@@ -697,6 +697,11 @@ button { cursor: pointer; border: none; font: inherit; }
 }
 .gift-right-wrap {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .gift-title-yellow {
   color: #facc15;
