@@ -117,31 +117,56 @@
   const contentEl = popup.querySelector('.noti-content');
   const imgEl = popup.querySelector('.noti-img');
 
-  const audio = new Audio('notification.mp3');
-  audio.volume = 0.5;
+  // Web Audio API — tạo tiếng chuông "ding dong" không cần file MP3
+  let audioCtx = null;
+  let audioUnlocked = false;
 
-  let idx = 0;
+  function getAudioCtx() {
+    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    return audioCtx;
+  }
 
-  // Giải phóng chính sách chặn phát âm thanh của trình duyệt sau khi click/touch
+  function playBeep(freq, startTime, duration, vol) {
+    const ctx = getAudioCtx();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(freq, startTime);
+    gain.gain.setValueAtTime(vol || 0.4, startTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, startTime + duration);
+    osc.start(startTime);
+    osc.stop(startTime + duration);
+  }
+
+  function playSound() {
+    if (!audioUnlocked) return;
+    try {
+      const ctx = getAudioCtx();
+      if (ctx.state === 'suspended') ctx.resume();
+      const now = ctx.currentTime;
+      // Tiếng chuông "ding dong": nốt 1 cao, nốt 2 trầm hơn
+      playBeep(880, now,        0.4, 0.45);  // ding
+      playBeep(660, now + 0.25, 0.5, 0.35);  // dong
+    } catch(e) {
+      console.log('Audio error:', e);
+    }
+  }
+
+  // Mở khóa audio sau tương tác đầu tiên
   const unlockAudio = () => {
-    audio.play().then(() => {
-      audio.pause();
-      audio.currentTime = 0;
-      document.removeEventListener('click', unlockAudio);
-      document.removeEventListener('touchstart', unlockAudio);
-    }).catch(e => {
-      console.log("Audio unlock pending interaction:", e);
-    });
+    try {
+      const ctx = getAudioCtx();
+      ctx.resume().then(() => { audioUnlocked = true; });
+    } catch(e) {}
+    document.removeEventListener('click', unlockAudio);
+    document.removeEventListener('touchstart', unlockAudio);
   };
   document.addEventListener('click', unlockAudio);
   document.addEventListener('touchstart', unlockAudio);
 
-  function playSound() {
-    audio.currentTime = 0;
-    audio.play().catch(e => {
-      console.log("Audio play blocked by browser autoplay policy. It will play after first user interaction.", e);
-    });
-  }
+  let idx = 0;
 
   function showNext() {
     const n = notifications[idx % notifications.length];
